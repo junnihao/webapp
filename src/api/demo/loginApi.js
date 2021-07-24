@@ -20,7 +20,7 @@ export function login(params) {
  * @returns {Promise<AxiosResponse<T>>}
  */
 export function outstandingIssues(params) {
-    return axios.post('/admin/home/outstandingIssues', params);
+    //return axios.post('/admin/home/outstandingIssues', params);
 }
 
 /**
@@ -29,7 +29,7 @@ export function outstandingIssues(params) {
  * @returns {Promise<AxiosResponse<T>>}
  */
 export function revenueAnalysis(params) {
-    return axios.post('/admin/home/revenueAnalysis', params);
+    //return axios.post('/admin/home/revenueAnalysis', params);
 }
 
 /**

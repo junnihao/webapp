@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { ElMessageBox } from 'element-plus'
-import router from '../router'
+import router from '@/router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
@@ -13,11 +13,11 @@ axios.defaults.headers.post['Content-Type'] = 'application/json'
 NProgress.inc(0.2)
 NProgress.configure({ easing: 'ease', speed: 600, showSpinner: false })
 
-axios.inCharClass.request.use(function (config) {
+/*axios.inCharClass.request.use(function (config) {
     // 启动进度条
     NProgress.start()
     return config
-})
+})*/
 
 axios.interceptors.response.use(res => {
     if (typeof res.data !== 'object') {
