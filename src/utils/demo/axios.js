@@ -1,24 +1,19 @@
 import axios from 'axios'
-import { ElMessageBox } from 'element-plus'
-import NProgress from 'nprogress'
+//import { ElMessageBox } from 'element-plus'
+//import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-import router from '@/router'
+//import router from '@/router'
 
-axios.defaults.baseURL = 'http://127.0.0.1:8080/'
+axios.defaults.baseURL = 'http://localhost:8089/demo/'
 axios.defaults.withCredentials = true
 axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest'
 axios.defaults.headers['token'] = localStorage.getItem('token') || ''
 axios.defaults.headers.post['Content-Type'] = 'application/json'
 
-// NProgress.inc(1.2)
+axios.header("Access-Control-Allow-Origin", "*");
+
+/*NProgress.inc(1.2)
 NProgress.configure({ easing: 'ease', speed: 6000, showSpinner: false })
-
-
-/*axios.inCharClass.request.use(function (config) {
-    // 启动进度条
-    NProgress.start()
-    return config
-})*/
 
 axios.interceptors.request.use(function (config) {
   // 出现进度条
@@ -47,6 +42,6 @@ axios.interceptors.response.use(res => {
     NProgress.done()
 
     return res.data
-})
+})*/
 
 export default axios

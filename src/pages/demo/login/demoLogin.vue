@@ -37,7 +37,7 @@
 import {onBeforeMount, reactive, ref, toRefs, unref} from "vue"
 /* import {useRouter} from 'vue-router'
  import {useStore} from 'vuex' */
-import {login} from '@/api/demo/loginApi'
+import {login} from 'src/api/demo/userApi'
 import {ElMessage} from "element-plus"
 import VueImgVerify from "@/components/VueImageVerify"
 
@@ -94,8 +94,9 @@ export default {
       console.log(state.loginForm)
 
       login(state.loginForm).then(res => {
-
-          if (res.code === 200) {
+          console.log(res)
+          if (res.success === true) {
+              console.log('login success ')
               // 登录成功后设置token到vuex中
               localStorage.username = res.data.username
               //store.commit('setToken', res.data.token)

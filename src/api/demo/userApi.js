@@ -1,4 +1,4 @@
-import axios from '@/utils/axios'
+import axios from '@/utils/demo/axios'
 
 // ==================登录=====start==============================
 /**
@@ -7,8 +7,8 @@ import axios from '@/utils/axios'
  * @returns {Promise<AxiosResponse<T>>}
  */
 export function login(params) {
-   // return axios.post('/login', params);
-    console.log(params)
+     return axios.post('user/login', params);
+    //console.log(params)
 }
 
 // ==================登录=====end==============================
