@@ -4,7 +4,7 @@ import axios from 'axios'
 import 'nprogress/nprogress.css'
 //import router from '@/router'
 
-axios.defaults.baseURL = 'http://localhost:8080/demo'
+axios.defaults.baseURL = 'http://localhost:8089/demo'
 axios.defaults.withCredentials = true
 axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest'
 axios.defaults.headers['token'] = localStorage.getItem('token') || ''
