@@ -7,7 +7,8 @@ import axios from '@/utils/demo/axios'
  * @returns {Promise<AxiosResponse<T>>}
  */
 export function login(params) {
-     return axios.post('user/login', params);
+     //return axios.post('/user/login', params);
+  return axios.post('/user/login', params);
     //console.log(params)
 }
 
