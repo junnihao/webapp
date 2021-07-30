@@ -35,17 +35,17 @@
 
 <script>
 import {onBeforeMount, reactive, ref, toRefs, unref} from "vue"
-/* import {useRouter} from 'vue-router'
- import {useStore} from 'vuex' */
-import {login} from 'src/api/demo/userApi'
+import {useRouter} from 'vue-router'
+/*import {useStore} from 'vuex' */
+import {login} from '@/api/demo/userApi'
 import {ElMessage} from "element-plus"
 import VueImgVerify from "@/components/VueImageVerify"
 
 
 export default {
   setup() {
-    /* const router = useRouter()
-     const store = useStore() */
+    const router = useRouter()
+    /*const store = useStore() */
     const validateForm = ref(null)
     const verifyRef = ref(null)
     const state = reactive({
@@ -94,15 +94,18 @@ export default {
       console.log(state.loginForm)
 
       login(state.loginForm).then(res => {
-          console.log(res)
-          if (res.success === true) {
+          console.log(' the request result status is: 1 '+JSON.stringify(res))
+          console.log(' the request result status is: 2 '+res.data.success)
+          if (res.data.success === true) {
+              console.log(' the request result status is: 3 '+res.data.data.userName)
               console.log('login success ')
               // 登录成功后设置token到vuex中
-              localStorage.username = res.data.username
+              localStorage.username = res.data.name
               //store.commit('setToken', res.data.token)
-             // router.push({path: 'home'})
+              router.push({path: '/'})
           } else {
               ElMessage({showClose: true, message: res.data, type: 'error'})
+              router.push({path: '/'})
           }
       })
     }
