@@ -30,6 +30,14 @@ const routes = [
     meta: {
       keepAlive: false // 需要被缓存
     }
+  },
+  {
+    path: '/test',
+    name: 'demoLogin',
+    component: demoLogin,
+    meta: {
+      keepAlive: false // 需要被缓存
+    }
   }
 ]
 

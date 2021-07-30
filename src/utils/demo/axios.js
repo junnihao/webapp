@@ -10,8 +10,6 @@ axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest'
 axios.defaults.headers['token'] = localStorage.getItem('token') || ''
 axios.defaults.headers.post['Content-Type'] = 'application/json'
 
-//axios.header("Access-Control-Allow-Origin", "*");
-
 /*NProgress.inc(1.2)
 NProgress.configure({ easing: 'ease', speed: 6000, showSpinner: false })
 
