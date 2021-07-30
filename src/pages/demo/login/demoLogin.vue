@@ -102,7 +102,7 @@ export default {
               // 登录成功后设置token到vuex中
               localStorage.username = res.data.name
               //store.commit('setToken', res.data.token)
-              router.push({path: '/test'})
+              router.push({path: '/home'})
           } else {
               ElMessage({showClose: true, message: res.data, type: 'error'})
               router.push({path: '/test'})

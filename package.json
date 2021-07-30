@@ -18,7 +18,8 @@
     "nprogress": "^0.2.0",
     "path": "^0.12.7",
     "quasar": "^2.0.0",
-    "requirejs": "^2.3.6"
+    "requirejs": "^2.3.6",
+    "vue3-echarts": "^1.0.3"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",
