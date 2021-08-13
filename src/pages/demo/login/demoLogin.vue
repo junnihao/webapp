@@ -124,7 +124,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .login {
   background-size: cover;
 

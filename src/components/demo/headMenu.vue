@@ -139,7 +139,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="less">
     .head-menu {
         text-align: right;
         cursor: pointer;

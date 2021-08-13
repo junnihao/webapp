@@ -55,6 +55,29 @@ const routes = [
         component: () => import('@/pages/demo/home.vue')
       }
     ]
+  },
+  {
+    path: "/goods",
+    name: "商品管理",
+    component: Layout,
+    icon: "el-icon-s-shop",
+    meta: {title: "商品管理", requireAuth: true},
+    children: [
+      {
+        path: "/goods-list",
+        name: "商品列表",
+        icon: "el-icon-s-data",
+        meta: {title: "商品列表", requireAuth: true},
+        component: () => import("@/pages/demo/GoodsList.vue")
+      },
+      {
+        path: "/goods-add",
+        name: "添加商品",
+        icon: "el-icon-document-add",
+        meta: {title: "添加商品", requireAuth: true},
+        component: () => import("@/pages/demo/GoodsAdd.vue")
+      }
+    ]
   }
 ]
 

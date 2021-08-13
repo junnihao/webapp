@@ -32,3 +32,5 @@ yarn-error.log*
 *.njsproj
 *.sln
 /src/layouts/demo/home.vue
+/src/pages/demo/login/GoodsList.vue
+/src/pages/demo/login/GoodsAdd.vue

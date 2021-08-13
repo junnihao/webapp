@@ -287,7 +287,7 @@
 
     }
 </script>
-<style lang="scss">
+<style lang="less">
      @import 'src/common/style/common';
     .home {
         padding-bottom: 4em;
