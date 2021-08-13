@@ -1,0 +1,104 @@
+﻿一、创建
+https://www.cnblogs.com/hellman/p/10985377.html
+1、安装node环境
+　　1、下载地址为：https://nodejs.org/en/
+　　2、检查是否安装成功：如果输出版本号，说明我们安装node环境成功　
+    3、为了提高我们的效率，可以使用淘宝的镜像：http://npm.taobao.org/
+　　输入：npm install -g cnpm –registry=https://registry.npm.taobao.org，即可安装npm镜像，以后再用到npm的地方直接用cnpm来代替就好了。
+
+
+2、全局安装vue-cli
+　　npm install --global vue-cli
+
+3、
+npm install -g @quasar/cli
+quasar create <folder_name>
+
+
+4、npm install -g cordova
+
+
+5、接下来安装android studio和java jdk
+
+
+6、到项目文件夹quasar mode add cordova，会多出来一个src-cordova的文件夹
+
+
+7、切换到src-cordova的文件夹下
+   cordova platform add android
+
+
+https://www.pianshen.com/article/2969948314/
+8、再执行quasar build -m cordova -T android
+   这样就可以在\src-cordova\platforms\android\app\build\outputs\apk\release文件夹里找到初始的apk了
+   
+9、想在手机上运行要签名
+keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 20000
+这里生成私钥
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore <path-to-unsigned-apk-file> alias_name
+
+加黑的自己替换，这里添加签名
+
+zipalign -v 4 <path-to-same-apk-file> HelloWorld.apk
+
+
+
+关于node.js:yarn-install时node版本不一致问题
+2021-06-11
+
+执行 “yarn install” 报如下谬误，谬误示意node版本不统一：
+The engine “node” is incompatible with this module. Expected version XXX
+
+解决形式：
+疏忽谬误后从新yarn install
+yarn config set ignore-engines true
+
+https://lequ7.com/guan-yu-nodejsyarninstall-shi-node-ban-ben-bu-yi-zhi-wen-ti.html
+
+
+
+--
+查看vue cli的版本
+vue --version
+
+查看当前project使用的vue版本
+npm list vue 
+
+查看quasar版本
+quasar -v
+
+
+nodejs是：1、运行js代码的容器；2、具有管理js包的功能，类似Maven
+vue是：前端组件
+vue cli是：按相应规范创建 vue project
+
+cordova是：提供API，让js能访问手机等设备
+webpack是：用来打包的工具
+
+
+quasar是：
+quasar cli是：整合利用vue / cordova / webpack，按规范构建前端工程
+
+二、
+生成配置文件
+quasar new boot element
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
