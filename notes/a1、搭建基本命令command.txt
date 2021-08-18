@@ -31,7 +31,7 @@ quasar create <folder_name>
 https://www.pianshen.com/article/2969948314/
 8、再执行quasar build -m cordova -T android
    这样就可以在\src-cordova\platforms\android\app\build\outputs\apk\release文件夹里找到初始的apk了
-   
+
 9、想在手机上运行要签名
 keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 20000
 这里生成私钥
@@ -63,7 +63,7 @@ https://lequ7.com/guan-yu-nodejsyarninstall-shi-node-ban-ben-bu-yi-zhi-wen-ti.ht
 vue --version
 
 查看当前project使用的vue版本
-npm list vue 
+npm list vue
 
 查看quasar版本
 quasar -v
@@ -83,6 +83,9 @@ quasar cli是：整合利用vue / cordova / webpack，按规范构建前端工�
 二、
 生成配置文件
 quasar new boot element
+
+解释vue.use
+https://www.jianshu.com/p/7775028cd2f4
 
 
 
