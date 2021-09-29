@@ -17,7 +17,7 @@ export default boot(async ( {  router } ) => {
               if (to.meta.title) {
                 document.title = to.meta.title
               } else {
-                document.title = "默存"
+                document.title = "用户登录"
               }
               next()
         })
