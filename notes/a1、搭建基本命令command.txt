@@ -12,7 +12,8 @@ https://www.cnblogs.com/hellman/p/10985377.html
 
 3、
 npm install -g @quasar/cli
-quasar create <folder_name>
+
+3.1、quasar create <folder_name>
 
 
 4、npm install -g cordova

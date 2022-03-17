@@ -104,7 +104,7 @@ export default {
               //store.commit('setToken', res.data.token)
               router.push({path: '/home'})
           } else {
-              ElMessage({showClose: true, message: res.data, type: 'error'})
+              ElMessage({showClose: true, message: res.data.message, type: 'error'})
               router.push({path: '/test'})
           }
       })
